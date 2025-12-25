@@ -7,8 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8084"
+import { API_URL } from "@/lib/api"
 
 interface GitHubRepository {
   fullName: string

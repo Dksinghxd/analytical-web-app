@@ -6,8 +6,7 @@ import { RootCauseAnalysis } from "@/components/root-cause-analysis"
 import { FailureImpactChart } from "@/components/failure-impact-chart"
 import { FailureSearch } from "@/components/failure-search"
 import { useEffect, useState } from "react"
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+import { API_URL } from "@/lib/api"
 
 export default function FailuresPage() {
   const [failures, setFailures] = useState([])

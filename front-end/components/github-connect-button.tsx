@@ -11,8 +11,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8084"
+import { API_URL } from "@/lib/api"
 
 interface GitHubStatus {
   connected: boolean

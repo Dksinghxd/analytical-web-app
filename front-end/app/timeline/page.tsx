@@ -4,8 +4,7 @@ import { BuildTimelineItem } from "@/components/build-timeline-item"
 import { TimelineStats } from "@/components/timeline-stats"
 import { FilterPanel } from "@/components/filter-panel"
 import { useEffect, useState } from "react"
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+import { API_URL } from "@/lib/api"
 
 export default function TimelinePage() {
   const [builds, setBuilds] = useState<import("@/lib/types").Build[]>([])

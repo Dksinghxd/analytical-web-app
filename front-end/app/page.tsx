@@ -9,8 +9,7 @@ import { FilterPanel } from "@/components/filter-panel"
 import { TrackedReposPanel } from "@/components/tracked-repos-panel"
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+import { API_URL } from "@/lib/api"
 
 export default function OverviewPage() {
   const [metrics, setMetrics] = useState(null)
