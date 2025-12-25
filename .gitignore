@@ -1,0 +1,23 @@
+# Local environment files / secrets
+.env
+**/.env
+**/.env.*
+
+# GitHub App private keys (never commit)
+**/github-app-private-key*.pem
+**/github-app-private-key*.der
+**/github-app-private-key*.key
+
+# Node
+node_modules/
+.next/
+out/
+
+# Logs
+*.log
+
+# Maven/Java
+**/target/
+
+# VS Code
+.vscode/

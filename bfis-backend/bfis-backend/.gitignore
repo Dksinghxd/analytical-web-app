@@ -1,0 +1,45 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Local environment secrets
+.env
+
+# GitHub App private keys (never commit)
+bfis-api/github-app-private-key*.pem
+bfis-api/github-app-private-key*.der
+bfis-api/github-app-private-key*.key
+
+# Docker
+.dockerignore
+
+# Build artifacts
+*.jar
+*.war
+*.ear

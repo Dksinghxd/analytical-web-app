@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: bfis-backend
+
+  config:
+    import: optional:file:.env[.properties],optional:file:bfis-api/.env[.properties]
+  
+  # JSON serialization
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    time-zone: UTC
+    default-property-inclusion: non_null
+
+# Server configuration
+# server:
+#   port: 8080
+  servlet:
+    context-path: /
+
+# Logging configuration
+logging:
+  level:
+    root: INFO
+    com.devops.bfis: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# GitHub App configuration
+github:
+  app:
+    app-id: ${GITHUB_APP_ID:}
+    client-id: ${GITHUB_APP_CLIENT_ID:}
+    client-secret: ${GITHUB_APP_CLIENT_SECRET:}
+    webhook-secret: ${GITHUB_APP_WEBHOOK_SECRET:}
+    private-key: ${GITHUB_APP_PRIVATE_KEY:}
+    private-key-path: ${GITHUB_APP_PRIVATE_KEY_PATH:}
+
+# Actuator endpoints for health checks
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always

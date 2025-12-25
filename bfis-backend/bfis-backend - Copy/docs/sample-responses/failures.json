@@ -1,0 +1,38 @@
+[
+  {
+    "id": "f1a2b3c4-d5e6-7890-1234-567890abcdef",
+    "buildId": "c2b3d4e5-f6a7-8901-bcde-f12345678901",
+    "failureType": "test",
+    "errorMessage": "AssertionError: Expected payment status to be 'completed', got 'pending'",
+    "frequencyCount": 12,
+    "firstSeenAt": "2024-01-05T08:00:00.000Z",
+    "lastSeenAt": "2024-01-15T09:15:00.000Z"
+  },
+  {
+    "id": "a2b3c4d5-e6f7-8901-2345-678901bcdef0",
+    "buildId": "d3c4e5f6-a7b8-9012-cdef-123456789012",
+    "failureType": "dependency",
+    "errorMessage": "Maven dependency resolution failed: could not resolve com.stripe:stripe-java:22.0.0",
+    "frequencyCount": 8,
+    "firstSeenAt": "2024-01-08T10:30:00.000Z",
+    "lastSeenAt": "2024-01-15T08:45:00.000Z"
+  },
+  {
+    "id": "b3c4d5e6-f7a8-9012-3456-789012cdef01",
+    "buildId": "c2b3d4e5-f6a7-8901-bcde-f12345678901",
+    "failureType": "infra",
+    "errorMessage": "Connection timeout to database after 30s",
+    "frequencyCount": 15,
+    "firstSeenAt": "2024-01-01T14:20:00.000Z",
+    "lastSeenAt": "2024-01-15T09:15:00.000Z"
+  },
+  {
+    "id": "c4d5e6f7-a8b9-0123-4567-890123def012",
+    "buildId": "d3c4e5f6-a7b8-9012-cdef-123456789012",
+    "failureType": "docker",
+    "errorMessage": "Docker build failed: base image 'node:18-alpine' not found",
+    "frequencyCount": 5,
+    "firstSeenAt": "2024-01-12T11:00:00.000Z",
+    "lastSeenAt": "2024-01-15T08:45:00.000Z"
+  }
+]

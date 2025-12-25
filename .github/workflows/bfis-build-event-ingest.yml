@@ -1,0 +1,34 @@
+name: BFIS Build Event Ingest
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  send-build-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Collect build info
+        id: buildinfo
+        run: |
+          echo "BUILD_ID=$(uuidgen)" >> $GITHUB_ENV
+          echo "REPO_NAME=${{ github.repository }}" >> $GITHUB_ENV
+          echo "BRANCH=${{ github.ref_name }}" >> $GITHUB_ENV
+           echo "DURATION_SECONDS=120" >> $GITHUB_ENV
+           echo "STATUS=success" >> $GITHUB_ENV
+           echo "COMMIT_HASH=${{ github.sha }}" >> $GITHUB_ENV
+           echo "TRIGGERED_AT=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_ENV
+      - name: Send build event to BFIS
+        run: |
+          curl -X POST "http://localhost:8080/api/ingest" \
+            -H "Content-Type: application/json" \
+             -d "{\n              \"repositoryName\": \"${{ github.repository }}\",\n              \"branch\": \"${{ github.ref_name }}\",\n              \"commitHash\": \"${{ github.sha }}\",\n              \"triggeredAt\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",\n              \"status\": \"${{ env.STATUS }}\",\n              \"durationSeconds\": ${{ env.DURATION_SECONDS }}\n            }"

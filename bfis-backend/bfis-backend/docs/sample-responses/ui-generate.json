@@ -1,0 +1,5 @@
+{
+  "status": "success",
+  "explanation": "Backend analysis completed successfully. Analyzed recent build failures and patterns.",
+  "recommendations": "Analyzed 45 unique failure patterns.\nMost frequent issue: INFRA failures (occurred 15 times).\n⚠️  High INFRA failure rate detected (15 occurrences). Consider reviewing:\n   - Resource allocation\n   - Network connectivity\n⚠️  High TEST failure rate detected (12 occurrences). Consider reviewing:\n   - Test stability and flakiness\n   - Test data dependencies\n"
+}

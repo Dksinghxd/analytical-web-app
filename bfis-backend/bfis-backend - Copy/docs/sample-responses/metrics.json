@@ -1,0 +1,6 @@
+{
+  "totalBuilds": 150,
+  "failureRate": 25.3,
+  "avgBuildTime": 245.7,
+  "flakyTestCount": 8
+}

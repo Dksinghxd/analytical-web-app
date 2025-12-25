@@ -1,0 +1,38 @@
+[
+  {
+    "id": "b1a2c3d4-e5f6-7890-abcd-ef1234567890",
+    "repositoryName": "payment-service",
+    "branch": "main",
+    "status": "success",
+    "durationSeconds": 245,
+    "triggeredAt": "2024-01-15T10:30:00.000Z",
+    "commitHash": "a3f2c1d"
+  },
+  {
+    "id": "c2b3d4e5-f6a7-8901-bcde-f12345678901",
+    "repositoryName": "user-api",
+    "branch": "develop",
+    "status": "failed",
+    "durationSeconds": 180,
+    "triggeredAt": "2024-01-15T09:15:00.000Z",
+    "commitHash": "b4e3a2f"
+  },
+  {
+    "id": "d3c4e5f6-a7b8-9012-cdef-123456789012",
+    "repositoryName": "notification-worker",
+    "branch": "feature/email-v2",
+    "status": "flaky",
+    "durationSeconds": 320,
+    "triggeredAt": "2024-01-15T08:45:00.000Z",
+    "commitHash": "c5f4b3e"
+  },
+  {
+    "id": "e4d5f6a7-b8c9-0123-def1-234567890123",
+    "repositoryName": "frontend-web",
+    "branch": "main",
+    "status": "success",
+    "durationSeconds": 195,
+    "triggeredAt": "2024-01-15T08:00:00.000Z",
+    "commitHash": "d6a5c4f"
+  }
+]
